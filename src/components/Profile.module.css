@@ -1,0 +1,8 @@
+.content {
+	grid-area: c;
+	background-color: rgb(225, 236, 247);
+  }
+
+  .posts {
+	  color: rgb(143, 62, 62);
+  }
