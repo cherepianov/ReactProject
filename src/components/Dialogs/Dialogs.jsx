@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './Dialogs.module.css';
 
-const Dialogs = () => {
+const Dialogs = (props) => {
    return (
-   <duv className={s.content}>
+   <duv>
       Dialogs
    </duv>
    )
