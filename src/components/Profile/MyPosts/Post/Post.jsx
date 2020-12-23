@@ -8,7 +8,7 @@ const Post = (props) => {
       <img src='https://movies4maniacs.liberty.me/wp-content/uploads/sites/1218/2015/09/avatarsucks.jpg' />
       {props.message}
           <div>
-        <span>Количество лайков: {props.likecount}</span>
+        <span>Количество лайков: {props.likesCount}</span>
       </div>
     </div>
   )
