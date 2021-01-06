@@ -1,8 +1,7 @@
 import {rerenderEntireTree} from '../render'
 
-
-
-let state = {
+let store = {
+let _state = {
    profilePage: {
       posts: [
          { id: 1, message: 'Это мой первый пост', likesCount: 15 },
@@ -31,24 +30,25 @@ let state = {
       ]
    }
 }
-
-window.state = state;
-
-export let addPost = () => {
-   let newPost = {
-      id: 5,
-      message: state.profilePage.newPostText,
-      likesCount: 0
-   };
-   state.profilePage.posts.push(newPost);
-   rerenderEntireTree(state);
-}
-
-export let updateNewPostText = (newText) => {
+   rerenderEntireTree() {
+      
+   },
+   addPost() {
+      let newPost = {
+         id: 5,
+         message: state.profilePage.newPostText,
+         likesCount: 0
+      };
+      state.profilePage.posts.push(newPost);
+      rerenderEntireTree(state);
+   },
+   updateNewPostText (newText) {
    
-   state.profilePage.newPostText = newText;
-   rerenderEntireTree(state);
+      state.profilePage.newPostText = newText;
+      rerenderEntireTree(state);
+   }
 }
+window.store = store;
 
-export default state;
+export default store;
 
